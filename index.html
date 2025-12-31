@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humble Tracker - Check Your Location</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <span class="heart">💝</span>
+                <h1>Humble Tracker</h1>
+            </div>
+            <p class="subtitle">created with ❤️ by Jay Jay</p>
+        </div>
+
+        <div class="card">
+            <div class="input-group">
+                <label for="phone">📱 Enter your phone number to check location</label>
+                <div class="phone-input">
+                    <select id="countryCode">
+                        <option value="+1">🇺🇸 +1</option>
+                        <option value="+44">🇬🇧 +44</option>
+                        <option value="+91">🇮🇳 +91</option>
+                        <option value="+234">🇳🇬 +234</option>
+                        <option value="+49">🇩🇪 +49</option>
+                        <option value=">
+                        +263">🇿🇼 +263
+                        </option>
+                        <option value=">
+                        +27">🇿🇦 +27</option>
+                    </select>
+                    <input type="tel" id="phone" placeholder="555-123-4567" maxlength="14">
+                </div>
+            </div>
+
+            <button id="trackBtn" class="track-btn">
+                <span class="btn-text">🔍 Track My Location</span>
+                <span class="loading">⏳ Tracking...</span>
+            </button>
+
+            <div id="result" class="result hidden">
+                <div class="success-icon">✅</div>
+                <div class="location-info">
+                    <div class="ip-display">IP: <span id="ipAddr">Loading...</span></div>
+                    <div class="coords-display">
+                        📍 <span id="coords">GPS: Loading...</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="status" class="status"></div>
+        </div>
+
+        <div class="footer">
+            <button id="copyBtn" class="copy-btn">📋 Copy Tracking Link</button>
+            <p>Free • Secure • Instant</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
